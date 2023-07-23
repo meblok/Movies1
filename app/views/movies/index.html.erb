@@ -1,0 +1,18 @@
+<div class="container">
+<p>Cuenta total de Peliculas: <%= @movies.count %></p>
+</div>
+
+<div class="container row d-evenly">
+<% @movies.each do |movie| %>
+        <div class="card col-2  p-0 mx-auto mb-3" style="width: 18rem;">
+        
+        <div class="card-body">        
+            <h5 class="card-title">Film: <%= movie.name %></h5>
+            <p class="card-text">Synopsis: <%= movie.synopsis %></p>
+            <p class="card-text">Director: <%= movie.director %></p>
+            
+        </div>
+    </div>
+<% end %>
+<a href="/movies/new"><button>Vuelta a new</button></a>
+</div>

@@ -1,0 +1,20 @@
+<div class="container">
+<p>Cuenta total de Series:  <%= @series.count %></p>
+
+
+<div class="container row d-evenly">
+<% @series.each do |serie| %>
+        <div class="card col-2  p-0 mx-auto mb-3" style="width: 18rem;">
+        
+        <div class="card-body">        
+            <h5 class="card-title">Nombre se Serie: <%= serie.name %></h5>
+            <p class="card-text">Synopsis: <%= serie.synopsis %></p>
+            <p class="card-text">Director: <%= serie.director %></p>
+            
+        </div>
+    </div>
+<% end %>
+</div>
+
+    <a href="/series/new"><button>Vuelta a new</button></a>
+</div>

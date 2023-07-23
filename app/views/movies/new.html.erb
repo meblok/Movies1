@@ -1,0 +1,24 @@
+
+
+<div class="container mt-5">
+    <%= form_with model: @movie, method: :post do |form| %>
+        <div>
+            <%= form.label :name, "Nombre" %>
+            <%= form.text_field :name %>
+        </div>
+        <br>
+        <div>
+            <%= form.label :synopsis, "Synopsis" %>
+            <%= form.text_area :synopsis %>
+        </div>
+        <br>
+        <div>
+            <%= form.label :director, "Director" %>
+            <%= form.text_area :director %>
+        </div>
+        <br>
+        <div>
+            <%= form.submit class:"primary" "Enviar"%>
+        </div>
+    <% end %>
+</div>

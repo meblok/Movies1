@@ -1,0 +1,28 @@
+<div class="container">
+<p>Cuenta total de Documentales: <%= @documentaryfilms.count %></p>
+</div>
+
+<div class="container row d-evenly">
+<% @documentaryfilms.each do |documentaryfilm| %>
+        <div class="card col-2  p-0 mx-auto mb-3" style="width: 18rem;">
+     
+        <div class="card-body">        
+            <h5 class="card-title">Film documental: <%= documentaryfilm.name %></h5>
+            <p class="card-text">Synopsis: <%= documentaryfilm.synopsis %></p>
+            <p class="card-text">Director: <%= documentaryfilm.director %></p>
+            
+        </div>
+    </div>
+<% end %>
+<a href="/documentaryfilms/new"><button>Vuelta a new</button></a>
+</div>
+<%# 
+
+<div class="card" style="width: 18rem;">
+  <img src="..." class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">Card title</h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <a href="#" class="btn btn-primary">Go somewhere</a>
+  </div>
+</div> %>
